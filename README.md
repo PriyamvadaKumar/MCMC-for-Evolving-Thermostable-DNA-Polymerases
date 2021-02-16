@@ -16,3 +16,6 @@ For example, if we start with thermostability(old) = 0.6, and make some change t
 
 From our implementation, MCMC was unable to consistently increase thermostability and preserve sequence similarity. This is likely due to the fact that each step of Gibbs sampling “wandered” through 100 steps of sequence space before landing on a final candidate, resulting in each step of Gibbs sampling being more likely to deviate from the original sequence and not monotonically increase in thermostability. Our implementation of the genetic algorithm, on the other hand, allowed for consistent selection of the largest increase in thermostability across each of the 100 generations, with one single opportunity to deviate from the starting sequence.
 To improve MCMC performance, we could use a single sampler, rather than Metropolis in Gibbs. This would allow for substantially less exploration of sequence space at each step, potentially resulting in the algorithm not taking steps that significantly deviate from the original sequence without improving thermostability.
+
+
+Date: Fall 2020 | Collaborators: Priyamvada Kumar, Emily Ha, Peter Stapleford, Cody Lim
